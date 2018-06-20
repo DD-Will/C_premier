@@ -1,0 +1,32 @@
+
+
+#include <stdio.h>
+#include <time.h>
+//计时头文件
+
+void PrintN (int N);
+clock_t start, stop;
+//定义clock()函数返回的变量类型
+double duration;
+//记录被测函数运行时间，以秒为单位
+
+
+
+
+int main(void)
+{
+	int N ;
+	printf("%d", CLK_TCK);
+	//打印时钟打点
+	scanf("%d", &N);
+	start = clock();
+	/*开始计时*/
+	PrintN(N);
+	/*所被测函数*/
+	stop = clock();
+	/*结束计时*/
+	duration = ((double)(stop - start)) / CLK_TCK;//常数CLK_TCK :机器时钟每秒所走的时钟打点数
+	/*得出函数运行时间*/
+	printf("%f", duration);
+	return 0;
+}
