@@ -1,0 +1,12 @@
+int A[maxSize];
+int length = 0;//初始化顺序储存
+
+typedef struct LNode
+{
+  int data;
+  struct LNode *next;
+}LNode;
+
+LNode *L;
+L = (LNode*)malloc(sizeof(LNode));
+A->next = B; B->next = C; C->next = D 
